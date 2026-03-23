@@ -1,0 +1,394 @@
+############################################################
+Main:
+
+    options:
+
+        run_type:
+            kind: string
+            default: trainFF
+            values:
+                - trainFF
+                - testFF
+                - train_testFF
+                - fingerprints
+
+        epochs_max:
+            kind: integer
+            default: 10000
+
+        test_log_interval:
+            kind: integer
+            default: 100
+
+        trajectory_file:
+            kind: string
+            default: train.traj
+
+        test_trajectory_file:
+            kind: string
+            default: train_test.traj
+
+        energy_training:
+            kind: boolean
+            default: True
+
+        force_training:
+            kind: boolean
+            default: True
+
+        use_cohesive_energy:
+            kind: boolean
+            default: False
+
+        scaler_type:
+            kind: string
+            default: LinearScaler
+            values:
+                - LinearScaler
+                - NoScaler
+                - MinMaxScaler
+                - LogScaler
+                - STDScaler
+
+        adjust:
+            kind: boolean
+            default: False
+        
+        restart:
+            kind: boolean
+            default: False
+
+        model_path:
+            kind: string
+            default: pyamff.pt
+        
+        ifelectronegativity:
+            kind: boolean
+            default: True
+        
+        ifhardness:
+            kind: boolean
+            default: True
+        
+        if_short:
+            kind: boolean
+            default: True
+        
+        if_long:
+            kind: boolean
+            default: True
+        
+        es_frac:
+            kind: float
+            default: 0.00
+        
+        en_frac:
+            kind: float
+            default: 1.00
+
+        chg_grad:
+            kind: boolean
+            default: False
+      
+        real_space_cut:
+            kind: float
+            default: 0.00
+        
+        total_ion_charge:
+            kind: float
+            default: 0.0
+        
+        fp_timer:
+            kind: string
+            default: none
+            values:
+               - none
+               - none-linear
+               - none-analytical
+               - one
+               - exp
+               - cosh
+               - square
+               
+        fp_timer_a:
+            kind: float
+            default: 1.0
+
+############################################################
+Parallelization:
+
+    options:
+        master_addr:
+            kind: string
+            default: 127.0.0.1
+
+        master_port:
+            kind: string
+            default: 12355
+
+        dynamic:
+            kind: boolean
+            default: False
+
+        mp_start_method:
+            kind: string
+            default: spawn
+            values:
+               - fork
+               - spawn
+
+        process_num: 
+            kind: integer
+            default: 1
+
+        batch_num_per_proc:
+            kind: integer
+            default: 100
+
+        thread_num:
+            kind: integer
+            default: 1
+
+        gr_process_num:
+            kind: integer
+            default: 1
+
+        device_type:
+            kind: string
+            default: CPU
+                - GPU
+
+        backend:
+            kind: string
+            default: gloo
+            values:
+                - gloo
+                - nccl
+
+############################################################
+Fingerprints:
+
+    options:
+
+        fp_type:
+            kind: string
+            default: BP
+            values:
+               - BP
+
+        fp_engine:
+            kind: string
+            default: Fortran
+            values:
+               - Fortran
+               - OldFortran
+
+        fp_parameter_file:
+            kind: string
+            default: fpParas.dat
+
+        fp_batch_mode:
+            kind: boolean
+            default: True
+
+        fp_batch_num:
+            kind: integer
+            default: 10
+
+        fp_use_existing:
+            kind: boolean
+            default: True
+
+        fp_test_use_existing:
+            kind: boolean
+            default: True
+
+        fp_file:
+            kind: string
+            default: fps.pckl 
+
+        fp_dir:
+            kind: string
+            default: fingerprints
+
+        test_fp_dir:
+            kind: string
+            default: test_fingerprints
+
+        gr_calc:
+            kind: boolean
+            default: False
+
+        gr_cutoff:
+            kind: float
+            default: 5
+
+############################################################
+MachineLearningModel:
+
+    options:
+
+        model_type:
+            kind: string
+            default: neural_network
+            values:
+                - neural_network
+
+        activation_function:
+            kind: string
+            default: sigmoid
+            values:
+                - sigmoid
+                - relu
+                - tanh
+                - softplus
+                - silu
+                - reluTanh
+
+        hidden_layers:
+            kind: integerlist
+            default: 20 10
+
+        initial_weights:
+            kind: string
+            default: random_truncated_normal
+            values:
+                - random_truncated_normal
+                - sqrt_prev_layer_num_neurons
+                - random_uniform
+
+############################################################
+LossFunction:
+
+    options:
+
+        loss_type:
+            kind: string
+            default: SE
+            values:
+                - SE
+                - RMLSE
+
+        energy_coefficient:
+            kind: float
+            default: 1.0
+
+        force_coefficient:
+            kind: float
+            default: 0.02
+
+############################################################
+Optimizer:
+
+    options:
+
+        optimizer_type:
+            kind: string
+            default: LBFGSScipy
+            values:
+                - LBFGS
+                - ADAM
+                - LBFGSScipy
+                - Rprop
+                - SGD
+
+        step_size:
+            kind: float
+            default: 0.1
+
+        force_tol:
+            kind: float
+            default: 0.01
+
+        energy_tol:
+            kind: float
+            default: 0.0001
+
+        loss_grad_tol:
+            kind: float
+            default: 1e-04
+
+        loss_convergence:
+            kind: float
+            default: 1e-09
+
+        learning_rate:
+            kind: float
+            default: 0.01
+
+        weight_decay:
+            kind: float
+            default: 0.0
+
+        write_final_grads:
+            kind: boolean
+            default: False
+
+
+############################################################
+CrossValidation:
+
+    options:
+
+        cross_validation:
+            kind: boolean
+            default: False
+
+        test_set_size:
+            kind: float
+            default: 0.2
+
+        write_train_test:
+            kind: boolean
+            default: False
+
+        analyze_test:
+            kind: boolean
+            default: False
+#        k_fold:
+#            kind: integer
+#            default: 0
+
+
+############################################################
+OptimizeHyperparameters:
+
+    options:
+
+        optimize_activation_func:
+            kind: boolean
+            default: False
+
+        optimize_scaler:
+            kind: boolean
+            default: False
+
+        optimize_force_coefficient:
+            kind: boolean
+            default: False
+
+        optimize_model_architecture:
+            kind: boolean
+            default: False
+
+        differential_ratio:
+            kind: float
+            default: 0.2
+
+############################################################
+Debug:
+
+    options:
+
+        init_model_parameters:
+            kind: boolean
+            default: False
+
+        nn_values:
+            kind: boolean
+            default: False
+
+        use_deterministic:
+            kind: boolean
+            default: False
+
