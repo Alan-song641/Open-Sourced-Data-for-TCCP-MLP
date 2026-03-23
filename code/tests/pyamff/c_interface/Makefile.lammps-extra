@@ -1,5 +1,0 @@
-# Settings that the LAMMPS build will import when this package library is used
-
-pyamff_SYSINC =
-pyamff_SYSLIB = -lPyAMFF -lAMFF -L/usr/local/Cellar/gcc/9.2.0_3/lib/gcc/9 -lgfortran -g -C -lcurl
-pyamff_SYSPATH =
