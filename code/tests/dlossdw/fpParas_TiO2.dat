@@ -1,0 +1,13 @@
+# FP type
+BP
+#Elements
+Ti O
+0.0 0.0
+#nG1s nG2s
+2 2
+#type  center neigTibor      eta       Rs
+G1   Ti   Ti   200   3.60   6.0
+G1   O   O   200   3.60   6.0
+#type  center neigTibor1 neigTibor2  eta    zeta   lambda   tTietas  rcut
+G2 Ti Ti Ti 0.01 100.00 1.00 1.60 6.00
+G2 O O O 0.01 100.00 1.00 1.60 6.00

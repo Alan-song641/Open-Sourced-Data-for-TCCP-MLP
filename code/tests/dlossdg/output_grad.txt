@@ -1,0 +1,78 @@
+Layer: module.nn_models.Ti.inputLayer.weight
+0.054993
+0.411088
+0.657067
+4.357530
+
+
+Layer: module.nn_models.Ti.inputLayer.bias
+1.130707
+11.673538
+
+
+Layer: module.nn_models.Ti.hiddenLayer_1.weight
+0.338339
+0.136156
+1.433381
+0.715935
+
+
+Layer: module.nn_models.Ti.hiddenLayer_1.bias
+10.293630
+46.350266
+
+
+Layer: module.nn_models.Ti.outputLayer.weight
+2.227283
+-6.389233
+-30.464135
+87.227128
+-14.489861
+41.409511
+
+
+Layer: module.nn_models.Ti.outputLayer.bias
+-24.578822
+334.897302
+158.665789
+
+
+Layer: module.nn_models.O.inputLayer.weight
+-0.367509
+-0.345708
+0.161380
+0.133491
+
+
+Layer: module.nn_models.O.inputLayer.bias
+-1.036141
+0.532388
+
+
+Layer: module.nn_models.O.hiddenLayer_1.weight
+-0.031239
+-0.311607
+-1.007884
+-4.857994
+
+
+Layer: module.nn_models.O.hiddenLayer_1.bias
+1.808998
+31.653773
+
+
+Layer: module.nn_models.O.outputLayer.weight
+-2.673830
+7.209109
+-18.246567
+49.148699
+4.335019
+-11.664953
+
+
+Layer: module.nn_models.O.outputLayer.bias
+-49.157644
+-334.897302
+79.434074
+
+

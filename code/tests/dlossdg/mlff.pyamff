@@ -1,0 +1,41 @@
+#Fingerprint type
+BP
+#Rmins
+  Ti   O
+    0.01    0.01
+    0.01    0.01
+#    type   number
+      G1        2
+#  center neighbor      eta       Rs     rcut        fpmin        fpmax
+      Ti       Ti  200.000    3.600    6.000 2.0714213550e+00  2.8901967119e+00
+       O        O  200.000    3.600    6.000 4.3939368236e-01  1.5325993149e+00
+#    type   number
+      G2        2
+#  center neighbor1 neighbor2      eta     zeta   lambda   thetas     rcut        fpmin        fpmax
+      Ti       Ti       Ti    0.010  100.000    1.000    1.600    6.000 5.8543856312e-02 1.4877792722e-01
+       O        O        O    0.010  100.000    1.000    1.600    6.000 7.5738496244e-01 1.9246269122e+00
+#MachineLearning model type
+atomic-NN
+#Activation function type
+tanh
+#Model Structure
+2
+2 2
+#Model Parameters
+ Ti
+ -8.15446620e-02 -2.39584344e-02 6.09809295e-02 1.37254058e-01 #inputLayer weight
+ -1.97280887e-02 2.24698355e-02 #inputLayer bias
+ -1.15039372e-01 -1.84971754e-01 -7.69409433e-02 5.97559156e-02 #hiddenLayer_1 weight
+ -7.44046738e-02 4.59618534e-02 #hiddenLayer_1 bias
+ 6.22402197e-02 2.12063980e-01 1.34430596e-01 -9.79626726e-02 6.34813765e-02 -1.83160859e-02 #outputLayer weight
+ -1.10353326e+01 -1.85240038e+00 -1.45492352e+00 #outputLayer bias
+ O
+ 8.61985035e-02 3.04794474e-02 -1.49699318e-02 -5.49081012e-02 #inputLayer weight
+ 1.41641371e-02 3.81875948e-02 #inputLayer bias
+ 3.70680518e-02 2.05142546e-02 -8.05229091e-02 1.67176821e-01 #hiddenLayer_1 weight
+ 1.52269257e-02 1.52624296e-01 #hiddenLayer_1 bias
+ -8.37155805e-02 1.39191177e-01 -2.70309504e-02 1.81621558e-01 -1.75849791e-02 -2.07214883e-02 #outputLayer weight
+ -5.89863354e+00 -3.21676600e+00 -2.53908992e+00 #outputLayer bias
+#Energy Scaling Parameters
+NoScaler
+1.00000000       0.00000000       #slope intercept

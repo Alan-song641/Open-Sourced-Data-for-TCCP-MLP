@@ -1,0 +1,13 @@
+# FP type
+BP
+#Elements
+Ge
+0.0
+#nG1s nG2s
+2 2
+#type  center neigTibor      eta       Rs
+G1   Ge   Ge   200   2.10   6.0
+G1   Ge   Ge   200   4.20  6.0
+#type  center neigTibor1 neigTibor2  eta    zeta   lambda   tTietas  rcut
+G2 Ge Ge Ge 0.01 100.00 1.00 0.84 6.00
+G2 Ge Ge Ge 0.01 100.00 1.00 1.80 6.00

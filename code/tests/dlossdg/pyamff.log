@@ -1,0 +1,36 @@
+
+Long-range interaction qeq-v2
+______       ___  ___  _______________ 
+| ___ \     / _ \ |  \/  ||  ___|  ___|
+| |_/ /   _/ /_\ \| .  . || |_  | |_   
+|  __/ | | |  _  || |\/| ||  _| |  _|  
+| |  | |_| | | | || |  | || |   | |    
+\_|   \__, \_| |_/\_|  |_/\_|   \_|    
+       __/ |                           
+      |___/  
+
+Platform:            Linux
+Platform-release:    6.6.87.2-microsoft-standard-WSL2
+Platform-version:    #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025
+Architecture:        x86_64
+Hostname:            ALANART
+IP-address:          127.0.1.1
+MAC-address:         00:15:5d:0e:83:02
+Processor:           Intel(R) Core(TM) Ultra 5 225H
+=======================================================
+Starting a PyAMFF job at 17:45:06 03/07/26 CST
+=======================================================
+Reading inputs from /home/alan/Github/pyamff-cv/tests/dlossdg/config.ini
+Reading training images from /home/alan/Github/pyamff-cv/tests/dlossdg/../TiO2/train1.traj
+Checking and preprocessing training images
+  Number of training images: 5
+  Calculating FPs for image 0
+  Energy coefficient: 1.000000
+  Force coefficent:   1.000000
+  Energy tolerance:   0.000100
+  Force tolerance:    0.010000
+  Loss tolerance:     0.002500
+Parallelization setup:
+  Total number of batches:       5
+  Number of processes:           5
+  Number of batches per process: 1
